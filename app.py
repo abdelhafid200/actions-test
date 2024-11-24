@@ -11,6 +11,8 @@ app.secret_key = 'your_secret_key'
 # app.config['MYSQL_DB'] = 'ecommerce'
 
 
+
+
 import os
 app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST')
 app.config['MYSQL_PORT'] = int(os.getenv('MYSQL_PORT', 3306))  # Default to 3306 if not set
@@ -19,6 +21,7 @@ app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD')
 app.config['MYSQL_DB'] = os.getenv('MYSQL_DB')
 
 app.debug = True
+
 mysql = MySQL(app)
 
 @app.route('/')
